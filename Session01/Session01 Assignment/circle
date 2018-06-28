@@ -1,0 +1,12 @@
+from turtle import *
+
+
+shape("turtle")
+color("green")
+speed(-1)
+
+
+circle(130)
+
+
+mainloop()

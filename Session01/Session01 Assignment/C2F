@@ -1,0 +1,5 @@
+c = int(input("Enter the temperature in Celsius? "))
+
+f = 1.8 * c + 32
+
+print("%d (C) = %d (f)" % (c, f))
