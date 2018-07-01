@@ -19,6 +19,6 @@ while True:
         print("Our items: ", end="")
         print(*clothes, sep=", ")
         break
-    if n not in CRUD:
+    else:
         print("Please try again")
     # break
