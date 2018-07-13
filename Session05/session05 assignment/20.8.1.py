@@ -9,4 +9,6 @@ print("The sentence has:")
 letter_counts = {}
 for letter in my_string:
     letter_counts[letter] = letter_counts.get(letter, 0) + 1
-print(letter_counts, end="\t")
+
+for key, value in letter_counts.items():
+    print(key, value)

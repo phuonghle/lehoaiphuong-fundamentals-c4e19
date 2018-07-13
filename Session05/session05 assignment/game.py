@@ -1,3 +1,7 @@
+# SOKOBAN
+
+# Create the game
+
 map = {
     "size_x" : 5,
     "size_y" : 5
@@ -22,11 +26,14 @@ destinations = [
     {"x" : 3, "y" : 1}
 ]
 
+# loop until ends
 playing = True
 while playing:
-
     for y in range(map["size_y"]):
         for x in range(map["size_x"]):
+
+            # set conditions
+
             player_is_here = False
 
             if x == player["x"] and y == player["y"]:
@@ -45,7 +52,7 @@ while playing:
                 if destination["x"] == x and destination["y"] == y:
                     destination_is_here = True
 
-        
+            # print out
 
             if player_is_here:
                 print("P  ", end="")
@@ -59,6 +66,7 @@ while playing:
         print()
 
 
+    # movement
 
     move = input("Your move: ").upper()
 
@@ -77,9 +85,15 @@ while playing:
         print("Buzzz")
         playing = False
 
+
+
+    # prevent P from going out of screen
+
     if 0 <= player["x"] + dx < map["size_x"] and 0 <= player["y"] + dy < map["size_y"]:
         player["x"] += dx
         player["y"] += dy
+        
+    # prevent B from going out of screen
 
     for box in boxes:
         if box["x"] == player["x"] and box["y"] == player["y"]:
@@ -87,6 +101,13 @@ while playing:
             box["y"] += dy
 
 
-# không đẩy box ra khỏi mao
-# không 
-# kiểm tra game có thắng hay ko? khi toạ độ của box bằng destination: tạo biến đếm nếu đếm bằng 
+    # Check if player win the game: every D has been replaced by B
+
+
+    # Player can’t push box out of map
+
+
+    # Player can’t push multiple boxes
+
+
+    # Add Obstacle or Wall into map, player can’t move across Obstacle and can’t push box over Obstacle
